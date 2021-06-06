@@ -7,7 +7,9 @@ import { Button } from '../Button/Button';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { Spinner } from '../Spinner/Spinner';
 import { EpisodeBriefInfo } from '../EpisodeBriefInfo/EpisodeBriefInfo';
+import Link from 'next/link';
 import styles from './EpisodeSearch.module.scss';
+import React from 'react';
 
 export const EpisodeSearch: React.FC = (props) => {
   const [episodeId, setEpisodeId] = useState('');
@@ -39,7 +41,11 @@ export const EpisodeSearch: React.FC = (props) => {
         {loading && <Spinner />}
         {error && <ErrorMessage>{text.messages.loadfailed}</ErrorMessage>}
         {data?.episodesByIds?.map((e) => (
-          <EpisodeBriefInfo key={e.episode} data={e} />
+          <Link key={e.episode} href={`/episode/${episodeId}`}>
+            <div>
+              <EpisodeBriefInfo data={e} />
+            </div>
+          </Link>
         ))}
       </div>
     </div>
