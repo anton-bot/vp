@@ -13,5 +13,12 @@
         "messages": {
             "loadfailed": "Couldn't find this episode. Please try another one?"
         }
+    },
+    "episode": {
+        "title": "View Episode",
+        "characters": "Characters in this episode",
+        "messages": {
+            "loadfailed": "Couldn't find this episode. Please try another one?"
+        }
     }
 }

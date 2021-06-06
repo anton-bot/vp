@@ -14,8 +14,18 @@
     }
 
     .metadata {
-        color: gray;
+        color: darkslategrey;
         font-size: 0.85em;
         text-transform: uppercase;
+    }
+
+    .characters {
+        color: darkslategrey;
+        font-size: 0.9em;
+
+        h3 {
+            color: $rm-blue;
+            text-shadow: 0 0 2px $rm-green, 0 0 3px $rm-green, 0 0 5px $rm-green;
+        }
     }
 }
