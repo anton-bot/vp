@@ -1,22 +1,22 @@
-import { GET_EPISODE_BY_ID } from '@/api/queries';
-import { useQuery } from '@apollo/client';
+import { lang } from '@/lang/lang';
 import Head from 'next/head';
+import { PageHeader } from '../components/PageHeader/PageHeader';
+import { EpisodeSearch } from '../components/EpisodeSearch/EpisodeSearch';
 
 export default function Home() {
-  const { data } = useQuery(GET_EPISODE_BY_ID, {
-    variables: {
-      episodeId: 1,
-    },
-  });
+  const text = lang();
 
   return (
-    <div className="Home">
+    <div className="Home screen">
       <Head>
-        <title>Main Page</title>
+        <title>
+          {text.app} — {text.search.title}
+        </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <pre>{JSON.stringify(data, undefined, 2)}</pre>
+      <PageHeader>{text.search.title}</PageHeader>
+      <EpisodeSearch />
     </div>
   );
 }

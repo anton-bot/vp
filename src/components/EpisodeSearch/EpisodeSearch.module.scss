@@ -1,0 +1,24 @@
+@import '../../styles/colors.scss';
+
+.searchbar {
+    display: flex;
+    gap: 0.5em;
+
+    input {
+        flex: 1 0 auto;
+        border: 2px solid $rm-green;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 10px $rm-green;
+        }
+    }
+
+    button {
+        flex: 0 0 10em;
+    }
+}
+
+.searchresults {
+    margin-top: 1em;
+}

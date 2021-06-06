@@ -1,0 +1,17 @@
+{
+    "app": "Rick and Morty",
+    "search": {
+        "title": "Find Episode",
+        "form": {
+            "episodeNo": {
+                "placeholder": "Episode number, e.g. 41"
+            }
+        },
+        "buttons": {
+            "find": "Find"
+        },
+        "messages": {
+            "loadfailed": "Couldn't find this episode. Please try another one?"
+        }
+    }
+}

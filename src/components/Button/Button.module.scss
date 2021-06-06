@@ -1,0 +1,16 @@
+@import '../../styles/colors.scss';
+
+.regular {
+    border-radius: 0.5em;
+    color: white;
+    background-color: $rm-blue;
+    box-shadow: 0 0 10px $rm-green;
+    border: 2px solid $rm-green;
+    padding: 0.5em 2em;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+        background-color: lighten($rm-blue, 5%);
+    }
+}
